@@ -24,6 +24,17 @@ situation financière mensuelle avec des graphiques. Projet n°1 du cahier des c
 - Transactions récurrentes (loyer, abonnements, salaire) générées automatiquement chaque mois
 - Mode sombre / clair, recherche et filtres, interface adaptée mobile
 
+## Installer l’application (PWA)
+
+L’application est installable sur **Android, iPhone/iPad, Windows, Mac et Linux** : icône sur l’écran
+d’accueil, ouverture en plein écran, utilisation hors connexion après la première visite.
+Page d’aide avec QR code : `/installer` (bouton « Installer » sur l’accueil).
+
+- Android / ordinateur (Chrome, Edge) : bouton « Installer » ou icône ⊕ de la barre d’adresse
+- iPhone / iPad (Safari) : Partager → « Sur l’écran d’accueil »
+
+Technique : `manifest.webmanifest`, icônes (dont icône « maskable »), service worker (`public/sw.js`).
+
 ## Stack
 
 | Composant | Technologie |

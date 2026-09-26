@@ -6,6 +6,7 @@ import { DataProvider } from './store.jsx'
 import Landing from './pages/Landing.jsx'
 import AuthPage from './pages/AuthPage.jsx'
 import Dashboard from './pages/Dashboard.jsx'
+import Installer from './pages/Installer.jsx'
 
 function Private({ children }) {
   const { user } = useAuth()
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/connexion" element={<AuthPage mode="login" />} />
         <Route path="/inscription" element={<AuthPage mode="register" />} />
+        <Route path="/installer" element={<Installer />} />
         <Route path="/demo" element={<Demo />} />
         <Route path="/app" element={<Private><Dashboard /></Private>} />
         <Route path="*" element={<Navigate to="/" replace />} />

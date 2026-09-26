@@ -8,6 +8,7 @@ import { useAuth } from '../lib/auth.jsx'
 import { useData, useTheme, exportCsv } from '../store.jsx'
 import { CATEGORIES, CURRENCIES, catById, monthLabel, monthShort, shiftMonth, monthKey } from '../data.js'
 import { frDate } from '../lib/db.js'
+import { InstallButton } from '../lib/pwa.jsx'
 
 const fmtDay = (d) => frDate(d, { day: '2-digit', month: 'short' })
 
@@ -77,6 +78,7 @@ export default function Dashboard() {
               {Object.entries(CURRENCIES).map(([k, c]) => <option key={k} value={k}>{c.label}</option>)}
             </select>
             <button className="btn-ghost !px-3" onClick={() => setDark(!dark)} aria-label={dark ? 'Passer en mode clair' : 'Passer en mode sombre'} title="Thème">{dark ? '☀️' : '🌙'}</button>
+            <InstallButton className="btn-ghost hidden lg:inline-flex" label="⬇ Installer" />
             <button className="btn-ghost hidden sm:inline-flex" onClick={() => exportCsv(inMonth, (id) => catById(id).nom)}>⬇ Export CSV</button>
             <span className="hidden text-sm font-semibold text-slate-600 dark:text-slate-300 md:inline">{user.name}</span>
             <button className="btn-ghost" onClick={() => { logout(); nav('/') }}>Quitter</button>

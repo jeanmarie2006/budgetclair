@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Area, AreaChart, Cell, Pie, PieChart, ResponsiveContainer } from 'recharts'
 import Logo from '../components/Logo.jsx'
 import { useAuth } from '../lib/auth.jsx'
+import { InstallButton } from '../lib/pwa.jsx'
 
 const PIE = [
   { name: 'Alimentation', v: 34, c: '#f97316' },
@@ -36,6 +37,7 @@ export default function Landing() {
       <header className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5">
         <Logo />
         <nav className="flex items-center gap-2">
+          <InstallButton className="btn-ghost hidden md:inline-flex" label="⬇ Installer" />
           {user ? (
             <Link to="/app" className="btn-primary">Mon tableau de bord</Link>
           ) : (
@@ -144,7 +146,8 @@ export default function Landing() {
       </main>
 
       <footer className="border-t border-slate-200 bg-white py-8 text-center text-sm text-slate-500">
-        <p>BudgetClair — projet de démonstration. Les données sont enregistrées uniquement dans votre navigateur.</p>
+        <p><Link to="/installer" className="font-semibold text-brand-700 hover:underline">Installer l’application</Link> sur mobile, tablette ou ordinateur</p>
+        <p className="mt-1">BudgetClair — projet de démonstration. Les données sont enregistrées uniquement dans votre navigateur.</p>
         <p className="mt-1">Réalisé par <a className="font-semibold text-brand-700 hover:underline" href="https://sedjame-vianney.vercel.app" target="_blank" rel="noopener">Sedjame Vianney</a></p>
       </footer>
     </div>
