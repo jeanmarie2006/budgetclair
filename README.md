@@ -3,7 +3,7 @@
 Application web pour enregistrer ses revenus et ses dépenses, les classer par catégorie et visualiser sa
 situation financière mensuelle avec des graphiques. Projet n°1 du cahier des charges « 9 projets fictifs ».
 
-**Démo en ligne :** https://budgetclair.vercel.app (bouton « Essayer la démo », compte prérempli sur 6 mois)
+**Démo en ligne :** https://budgetclair-nine.vercel.app (bouton « Essayer la démo », compte prérempli sur 6 mois)
 
 ![Accueil](docs/accueil.png)
 ![Tableau de bord](docs/dashboard.png)
